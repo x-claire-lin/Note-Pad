@@ -2,6 +2,8 @@
 A local hosted note-taking app using PHP.
 
 This is a group project as a assignment of web programming course.
+
+![preview](./memo-pad-preview.png)
 # Function Guide
   1. Authentication and Authorization:
      - Session Management: Ensure user is logged in and session variables are set.
