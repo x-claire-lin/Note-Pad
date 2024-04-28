@@ -1,0 +1,234 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+/* END CSS Reset*/
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background: rgb(250,255,212);
+    background: linear-gradient(332deg, rgba(250,255,212,1) 0%, rgba(212,239,221,1) 100%);
+    margin: 5%;
+    background-attachment: fixed;
+    margin-bottom: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}  
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    position: sticky;
+}
+
+.user {
+    display: flex;
+    align-items: baseline; /* 垂直居中对齐内容 */
+    justify-content: space-between
+}
+
+a {
+    margin-top: 10px;
+    font-size: small;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.userinfo {
+    position: sticky;
+    top: 0; /* 使右上部分固定在顶部 */
+    z-index: 1; /* 提高层级，使右下部分能够滚动在其上 */
+}
+
+.stat {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20%;
+    justify-content: space-between;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中对齐 */
+    justify-content: center; /* 垂直居中对齐 */
+}
+
+.number {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.word {
+    font-size: 12px;
+    color: #6b6b6b;
+}
+
+.main-content {
+    width: 70%;
+    flex: 1;
+    padding: 20px;
+}
+
+.top-content {
+    background: rgba(250,255,212,0.5);
+    background: linear-gradient(332deg, rgba(250,255,212,0.5) 0%, rgba(212,239,221,0.5) 100%);
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: sticky;
+    top: 0; /* 使右上部分固定在顶部 */
+    z-index: 1; /* 提高层级，使右下部分能够滚动在其上 */
+}
+
+.bottom-content {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    overflow-y: auto; /* 当内容过多时，启用垂直滚动条 */
+    max-height: calc(100vh - 80px); /* 限制右下部分的最大高度，避免超出屏幕 */
+}
+
+.USERNAME{
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 将子元素分散对齐 */
+    margin-bottom: 20px;
+}
+
+.search-container {
+    margin-left: auto; 
+    text-align: center;
+    margin-right: 20px;
+}
+
+.search-box {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* 让 padding 不影响宽度 */
+    font-size: 12px;
+}
+
+.date{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* 让 padding 不影响宽度 */
+    font-size: 12px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #8dcf7f;
+    color: #fff;
+    border: 1px solid #6fa763;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    justify-content: flex-end; /* 将按钮靠右对齐 */
+}
+
+button:hover {
+    background-color: #73a06a;
+}
+
+.memo-container {
+    width: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: 98%;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 14px;
+    outline: none;
+}
+
+.save_memo{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.memo-card {
+    display: flex;
+    flex-direction: column; /* 将子元素垂直排列 */
+    width: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.memo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.memo-timestamp {
+    font-size: 12px;
+    color: #888;
+}
+
+.memo-content {
+    margin-bottom: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end; /* 将按钮靠右对齐 */
+    gap: 5px;
+}
+
+.foot {
+    text-align: center; /* Center align the text */
+    padding: 10px 0; /* Add padding top and bottom */
+    bottom: 0; /* Stick the footer to the bottom of the viewport */
+    font-size: 12px;
+    color: #6b6b6b;
+}
