@@ -1,7 +1,7 @@
 # Note Pad
 A local hosted note-taking app using PHP.
 
-This is a group project as a assignment of web programming course.
+This is a group project as an assignment of web programming course.
 
 ![preview](./memo-pad-preview.png)
 # Function Guide
